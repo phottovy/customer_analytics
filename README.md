@@ -24,7 +24,7 @@ This is part two of my capstone project. Part one can be found [here][1].
 
 <a id='background'></a>
 ## Background
-<!-- ![ClickFox_logo][3]   -->
+![ClickFox_logo][3]  
 <!-- <img style="float: right;" src="images/CF_logo.png"> -->
 In today’s business world, anticipating the needs and wants of your customers is vital to the success of your business. Partnering with [ClickFox][2], the leader in “Customer Journey Analytics,” I was able to gain valuable real-world experience using advanced analytics working with customer data on a current business use case.  
 <img style="float: right;" src="images/CF_logo.png">
