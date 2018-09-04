@@ -27,7 +27,6 @@ This is part two of my capstone project. Part one can be found [here][1].
 ![ClickFox_logo][3]  
 <!-- <img style="float: right;" src="images/CF_logo.png"> -->
 In today’s business world, anticipating the needs and wants of your customers is vital to the success of your business. Partnering with [ClickFox][2], the leader in “Customer Journey Analytics,” I was able to gain valuable real-world experience using advanced analytics working with customer data on a current business use case.  
-<img style="float: right;" src="images/CF_logo.png">
 
 For a particular client, ClickFox provides forecasts for daily, aggregated KPI’s related to key segments of the customer journey. The goal of this project is to both analyze the current process and look for ways to optimize the flow of information going forward.
 
