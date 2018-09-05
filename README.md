@@ -17,9 +17,9 @@ Linkedin: [in/patrick-hottovy](https://www.linkedin.com/in/patrick-hottovy/)
 * [Objectives](#objectives)
 * [Approach](#approach)
 * [Measures](#measures)
-<!-- * [About Me](#about-me) -->
+* [Results](#results)
 * [References](#references)
-
+<!-- * [About Me](#about-me) -->
 
 <a id='background'></a>
 ## Background
@@ -36,6 +36,7 @@ For a particular client, ClickFox provides forecasts for daily, aggregated KPIâ€
 The datasets consist of a number of separate daily feeds containing different customer metrics. For each feed, six different predictions using various time series methods are included. In addition, each daily forecast contains predictions for 14 days into the future. I was provided 10 months of raw data and actuals for these feeds to use for my analysis.
 
 ![data_example][4]
+
 **Fig 1: Example Raw Data for one of the feeds**  
 **Fig 2: Actuals compared to best forecast for that day**  
 **Fig 3: Composite of the best predictor per day by color**
@@ -61,7 +62,7 @@ The datasets consist of a number of separate daily feeds containing different cu
 ## Measures
 Even though the daily KPI is a continuous variable, the focus of this project was to determine which of the current predictors or combination of predictors provided the best results.
 
-This ultimately turned this project into a multiclass classification problem. I created models and tested the data using the following techniques:
+This ultimately turned the project into a multiclass classification problem. I created models and tested the data using the following techniques:
 * Logistic Regression
 * k Nearest Neighbors
 * Ensemble methods
@@ -69,6 +70,12 @@ This ultimately turned this project into a multiclass classification problem. I 
  * Gradient Boosting
 * Multilayer Perceptron Neural Network
 
+
+<a id='Results'></a>
+## Results
+After building a pipeline to test the data, I discovered with this data, all of the classification models provided reasonably similar results. Below are the models that provided the best scores for the different feeds:
+
+![model_pie][5]
 
 <a id='references'></a>
 ## References
@@ -80,8 +87,8 @@ This ultimately turned this project into a multiclass classification problem. I 
 [1]: https://github.com/phottovy/time_series_forecasting
 [2]: https://www.clickfox.com
 [3]: images/CF_logo.png
-[4]: images/data_example.svg
-[3]: images/
+[4]: images/git_data_example.svg
+[5]: images/git_model_pie.svg
 [3]: images/
 [3]: images/
 [3]: images/
