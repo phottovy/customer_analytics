@@ -3,13 +3,12 @@
 
 Galvanize Data Science Immersive | Capstone #3 | September 2018
 
+This is part two of my capstone project using this dataset. Part one can be found [here][1].
+
 ### Pat Hottovy
 #### Data Scientist
 Email: p.hottovy@gmail.com  
 Linkedin: [in/patrick-hottovy](https://www.linkedin.com/in/patrick-hottovy/)
-
-
-This is part two of my capstone project. Part one can be found [here][1].
 
 
 ## Table of Contents
