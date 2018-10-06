@@ -18,22 +18,21 @@ Linkedin: [in/patrick-hottovy](https://www.linkedin.com/in/patrick-hottovy/)
 * [Approach](#approach)
 * [Modeling Techniques](#models)
 * [Change to Approach](#change)
+* [Final Change](#final)
 * [Results](#results)
 * [References](#references)
 <!-- * [About Me](#about-me) -->
 
+
 <a id='background'></a>
 ## BACKGROUND
-
 <p align="center">
   <img src="images/dual_logos.png">
 </p>
 
-
 In today’s business world, anticipating the needs and wants of your customers is vital to the success of your business. Partnering with [ClickFox][2], the leader in “Customer Journey Analytics,” I was able to gain valuable real-world experience using advanced analytics working with customer data on a current business use case.  
 
 For a particular client, ClickFox provides forecasts for daily, aggregated KPI’s related to key segments of the customer journey. The goal of this project is to both analyze the current process and look for ways to optimize the flow of information going forward.
-
 
 
 <a id='data'></a>
@@ -66,6 +65,7 @@ As you can see in the graphs above, Feed 0 is relatively consistent while Feed 5
 * Analyze the time series data and identify the trends and features that are most indicative of future activity
 * Create a workflow from the current process to provide a single daily forecast using either one or a combination of the current predictors
 
+
 # Step 1: Identify the best predictors per day
 Looking at the data, I calculated which of the six prediction methods was closest to actuals in hopes of finding trends between the predictors.
 
@@ -87,7 +87,9 @@ The third figure for both feeds shows that all six predictors are often the clos
 * Unfortunately the previous approach only works if you know the actual amount each day, which defeats the purpose of even making a prediction
 * I need to come up with a way to predict which of the predictor or combination of predictors was going to be the "best" each day
 
+
 # Step 2: Use machine learning to predict the "best" predictor
+
 
 <a id='models'></a>
 ## MODELING TECHNIQUES
@@ -146,9 +148,11 @@ One method of calculating this is to divide the RMSE by the mean of the data:
 * Even the best feeds, the forecast is coming in greater than 15 percent from the actuals which is not all that useful in a daily forecast.  
 * You could probably get better results by simply using the previous several days or maybe day of the week since many of the feeds have a weekly cycle.
 
+
 <a id='change'></a>
 ## CHANGE TO APPROACH
 * Let's explore ways to improve the results
+
 
 # Step 3: Limit predictions to top 3 predictors over the training range
 * Using the training set, identify the three best predictors and ignore the others
@@ -166,18 +170,29 @@ One method of calculating this is to divide the RMSE by the mean of the data:
 ![All_6][26]
 ![Top_3][27]
 
+* Using the top 3 predictors, many of the feed dropped below the 20-25% mark so there is some improvement using this method.  
+* Several of the feeds are still not very close to actuals, especially feed_7.
 
 
+<a id='final'></a>
+## FINAL CHANGE
+After scratching my head on ways to continue to improve the predictions, it hit me that there is a flaw in my approach
 
 
+# Step 4: Shorten the prediction window
+* Since this is a daily forecast, I need to shorten my forecast period instead of making my models predict further into the future
+* I will also use a validation set to test against unseen data
 
+#### Feed 0 Results for Each Model:
+![Feed_0_MLP][28]
+![Feed_0_RF][29]
+![Feed_0_KNN][30]
 
+#### Feed 5 Results for Each Model:
+![Feed_5_MLP][31]
+![Feed_5_RF][32]
+![Feed_5_KNN][33]
 
-<!-- <a id='Results'></a>
-## RESULTS
-After building a pipeline to test the data, I discovered with this data, all of the classification models provided reasonably similar results. Below are the models that provided the best scores for the different feeds:
-
-![model_pie][5] -->
 
 <a id='references'></a>
 ## References
@@ -213,13 +228,9 @@ After building a pipeline to test the data, I discovered with this data, all of 
 [25]: images/top_3_f5_p1_knn_(top_3).svg
 [26]: images/top_3_all_6_norm_rmse_by_feed.svg
 [27]: images/top_3_top_3_norm_rmse_by_feed.svg
-
-
-
-
-
-<!-- [4]: images/git_data_example.svg
-[5]: images/git_model_pie.svg
-[3]: images/
-[3]: images/
-[3]: images/ -->
+[28]: images/top_3_val_f0_p1_mlp.svg
+[29]: images/top_3_val_f0_p1_rf.svg
+[30]: images/top_3_val_f0_p1_knn.svg
+[31]: images/top_3_val_f5_p1_mlp.svg
+[32]: images/top_3_val_f5_p1_rf.svg
+[33]: images/top_3_val_f5_p1_knn.svg
