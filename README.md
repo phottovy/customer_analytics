@@ -151,6 +151,26 @@ One method of calculating this is to divide the RMSE by the mean of the data:
 * Let's explore ways to improve the results
 
 # Step 3: Limit predictions to top 3 predictors over the training range
+* Using the training set, identify the three best predictors and ignore the others
+* The top 3 predictors are uniquely calculated for each feed
+
+#### Feed 0 - Random Forest
+![All_6_RF][22]
+![Top_3_RF][23]
+
+#### Feed 5 - K Nearest Neighbors
+![All_6_KNN][24]
+![Top_3_KNN][25]
+
+
+
+
+
+
+
+
+
+
 
 <!-- <a id='Results'></a>
 ## RESULTS
@@ -186,6 +206,15 @@ After building a pipeline to test the data, I discovered with this data, all of 
 [19]: images/nrmse.svg
 [20]: images/top_6_norm_rmse_by_feed.svg
 [21]: images/top_6_pie_by_feed.svg
+[22]: images/top_3_f0_p1_rf_(all_6).svg
+[23]: images/top_3_f0_p1_rf_(top_3).svg
+[24]: images/top_3_f5_p1_knn_(all_6).svg
+[25]: images/top_3_f5_p1_knn_(top_3).svg
+
+
+
+
+
 
 <!-- [4]: images/git_data_example.svg
 [5]: images/git_model_pie.svg
