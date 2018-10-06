@@ -52,21 +52,28 @@ For demonstration purposes, I am going to use two different feeds, which I will 
 
 As you can see in the graphs above, Feed 0 is relatively consistent while Feed 5 fluctuates throughout the year. You can also see how much the six forecast methods varies with the actual data.
 
-
-![data_example][4]
-
-**Fig 1: Example Raw Data for one of the feeds**  
-**Fig 2: Actuals compared to best forecast for that day**  
-**Fig 3: Composite of the best predictor per day by color**
+#### Goal: Find a way to use these predictors to provide the customer with one daily forecast
 
 
 <a id='objectives'></a>
 ## Objectives
-* Evaluate the six predictions methods currently being provided to the client
+* Evaluate the six prediction methods currently being provided to the client
 * Analyze the time series data and identify the trends and features that are most indicative of future activity
 * Create a workflow from the current process to provide a single daily forecast using either one or a combination of the current predictors
 
 ### Step 1: Identify the best predictors per day
+Looking at the data, I calculated which of the six prediction methods was closest to actuals in hopes of finding trends between the predictors.
+
+#### Feed 0
+![Feed_0_subplots][8]
+
+#### Feed 5
+![Feed_5_subplots][9]
+
+**Fig 1: Raw Data compared to the best forecast per day**  
+**Fig 2: Raw Data compared to overall best predictor**  
+**Fig 3: Composite of the best predictor per day by color (this is the same forecast as Fig 1)**
+
 
 
 <a id='approach'></a>
@@ -114,8 +121,10 @@ After building a pipeline to test the data, I discovered with this data, all of 
 [5]: images/all_six_f0_p1.svg
 [6]: images/raw_data_f5_p1.svg
 [7]: images/all_six_f5_p1.svg
+[8]: images/top_6_subplots_v1_f0_p1.svg
+[9]: images/top_6_subplots_v1_f5_p1.svg
 
-
+top_6_subplots_v1_f0_p1
 [4]: images/git_data_example.svg
 [5]: images/git_model_pie.svg
 [3]: images/
