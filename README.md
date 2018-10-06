@@ -206,10 +206,10 @@ After building a pipeline to test the data, I discovered with this data, all of 
 [19]: images/nrmse.svg
 [20]: images/top_6_norm_rmse_by_feed.svg
 [21]: images/top_6_pie_by_feed.svg
-[22]: images/top_3_f0_p1_rf_(all_d6).svg
-[23]: images/top_3_f0_p1_rf_(top_d3).svg
-[24]: images/top_3_f5_p1_knn_(all_d6).svg
-[25]: images/top_3_f5_p1_knn_(top_d3).svg
+[22]: images/top_3_f0_p1_rf_(all_6).svg
+[23]: images/top_3_f0_p1_rf_(top_3).svg
+[24]: images/top_3_f5_p1_knn_(all_6).svg
+[25]: images/top_3_f5_p1_knn_(top_3).svg
 
 
 
