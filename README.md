@@ -33,7 +33,25 @@ For a particular client, ClickFox provides forecasts for daily, aggregated KPIâ€
 
 <a id='data'></a>
 ## Data
+** \*Since the data comes from a confidential client, there is a limited amount of information I can provide about the data.**
+
 The datasets consist of a number of separate daily feeds containing different customer metrics. For each feed, six different predictions using various time series methods are included. In addition, each daily forecast contains predictions for 14 days into the future. I was provided 10 months of raw data and actuals for these feeds to use for my analysis.
+
+In total, the data included:
+* 10 unique feeds
+* 6 unique forecast methods for each feed
+* Each daily forecast makes predictions 14 days into the future
+* I was provided 10 months of data for my analysis
+
+For demonstration purposes, I am going to use two different feeds, which I will call "Feed 0" and "Feed 5" as examples:
+
+![Feed 0 raw][4]
+![Feed 0 all six][5]
+![Feed 5 raw][6]
+![Feed 5 all six][7]
+
+As you can see in the graphs above, Feed 0 is relatively consistent while Feed 5 fluctuates throughout the year. You can also see how much the six forecast methods varies with the actual data.
+
 
 ![data_example][4]
 
@@ -48,14 +66,19 @@ The datasets consist of a number of separate daily feeds containing different cu
 * Analyze the time series data and identify the trends and features that are most indicative of future activity
 * Create a workflow from the current process to provide a single daily forecast using either one or a combination of the current predictors
 
+### Step 1: Identify the best predictors per day
+
 
 <a id='approach'></a>
 ## Approach
-* Evaluate current predictors using root mean squared error (RMSE)
+* Unfortunately the previous approach only works if you know the actual amount each day, which defeats the purpose of even making a prediction
+* We need to come up with a way to predict which of the predictor or combination of predictors was going to be the "best" each day
+
+<!-- * Evaluate current predictors using root mean squared error (RMSE)
 * Perform time series decomposition and stationarity tests
 * Create my own forecasts for comparison to the current predictors
 * Create a pipeline with a variety of statistical modeling techniques to find the optimal results
- * Build a workflow using the best model to provide one daily feed
+ * Build a workflow using the best model to provide one daily feed -->
 
 
 <a id='measures'></a>
@@ -86,7 +109,13 @@ After building a pipeline to test the data, I discovered with this data, all of 
 
 [1]: https://github.com/phottovy/time_series_forecasting
 [2]: https://www.clickfox.com
-[3]: images/CF_logo.png
+[3]: images/dual_logos.png
+[4]: images/raw_data_f0_p1.svg
+[5]: images/all_six_f0_p1.svg
+[6]: images/raw_data_f5_p1.svg
+[7]: images/all_six_f5_p1.svg
+
+
 [4]: images/git_data_example.svg
 [5]: images/git_model_pie.svg
 [3]: images/
