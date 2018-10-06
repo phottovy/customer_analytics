@@ -11,18 +11,19 @@ Email: p.hottovy@gmail.com
 Linkedin: [in/patrick-hottovy](https://www.linkedin.com/in/patrick-hottovy/)
 
 
-## Table of Contents
+## TABLE OF CONTENTS
 * [Background](#background)
 * [Data](#data)
 * [Objectives](#objectives)
 * [Approach](#approach)
+* [Modeling Techniques](#models)
 * [Measures](#measures)
 * [Results](#results)
 * [References](#references)
 <!-- * [About Me](#about-me) -->
 
 <a id='background'></a>
-## Background
+## BACKGROUND
 ![ClickFox_logo][3]  
 <!-- <img style="float: right;" src="images/CF_logo.png"> -->
 In today’s business world, anticipating the needs and wants of your customers is vital to the success of your business. Partnering with [ClickFox][2], the leader in “Customer Journey Analytics,” I was able to gain valuable real-world experience using advanced analytics working with customer data on a current business use case.  
@@ -32,8 +33,8 @@ For a particular client, ClickFox provides forecasts for daily, aggregated KPI�
 
 
 <a id='data'></a>
-## Data
-** \*Since the data comes from a confidential client, there is a limited amount of information I can provide about the data.**
+## DATA
+**Since the data comes from a confidential client, there is a limited amount of information I can provide about the data.**
 
 The datasets consist of a number of separate daily feeds containing different customer metrics. For each feed, six different predictions using various time series methods are included. In addition, each daily forecast contains predictions for 14 days into the future. I was provided 10 months of raw data and actuals for these feeds to use for my analysis.
 
@@ -56,7 +57,7 @@ As you can see in the graphs above, Feed 0 is relatively consistent while Feed 5
 
 
 <a id='objectives'></a>
-## Objectives
+## OBJECTIVES
 * Evaluate the six prediction methods currently being provided to the client
 * Analyze the time series data and identify the trends and features that are most indicative of future activity
 * Create a workflow from the current process to provide a single daily forecast using either one or a combination of the current predictors
@@ -74,22 +75,39 @@ Looking at the data, I calculated which of the six prediction methods was closes
 **Fig 2: Raw Data compared to overall best predictor**  
 **Fig 3: Composite of the best predictor per day by color (this is the same forecast as Fig 1)**
 
+The third figure for both feeds shows that all six predictors are often the closest for a particular day. Unfortunately, there does not seem to be an obvious trend between the predictors.
 
 
 <a id='approach'></a>
-## Approach
+## APPROACH
 * Unfortunately the previous approach only works if you know the actual amount each day, which defeats the purpose of even making a prediction
 * We need to come up with a way to predict which of the predictor or combination of predictors was going to be the "best" each day
 
-<!-- * Evaluate current predictors using root mean squared error (RMSE)
-* Perform time series decomposition and stationarity tests
-* Create my own forecasts for comparison to the current predictors
-* Create a pipeline with a variety of statistical modeling techniques to find the optimal results
- * Build a workflow using the best model to provide one daily feed -->
+### Step 2: Use machine learning to predict the "best" predictor
+
+<a id='models'></a>
+## MODELING TECHNIQUES
+Even though the daily KPI is a continuous variable, the focus of this project was to determine which of the current predictors or combination of predictors provided the best results.
+
+This ultimately turned the project into a multiclass classification problem. I created models and tested the data using the following classification methods:
+* k Nearest Neighbors
+* Random Forests
+* Multilayer Perceptron Neural Network
+
+To evaluate the models, I used root mean squared error (RMSE) to evaluate the models:
+
+$$
+RMSE = \sqrt{\frac{1}{n}\sum_{i=1}^{n}(Y_i - \hat{Y}_i)^2}
+$$
+
+![Feed_0_matshow][10]
+
+![Feed_5_matshow][11]
+
 
 
 <a id='measures'></a>
-## Measures
+## MEASURES
 Even though the daily KPI is a continuous variable, the focus of this project was to determine which of the current predictors or combination of predictors provided the best results.
 
 This ultimately turned the project into a multiclass classification problem. I created models and tested the data using the following techniques:
@@ -102,7 +120,7 @@ This ultimately turned the project into a multiclass classification problem. I c
 
 
 <a id='Results'></a>
-## Results
+## RESULTS
 After building a pipeline to test the data, I discovered with this data, all of the classification models provided reasonably similar results. Below are the models that provided the best scores for the different feeds:
 
 ![model_pie][5]
@@ -121,10 +139,15 @@ After building a pipeline to test the data, I discovered with this data, all of 
 [5]: images/all_six_f0_p1.svg
 [6]: images/raw_data_f5_p1.svg
 [7]: images/all_six_f5_p1.svg
-[8]: images/top_6_subplots_v1_f0_p1.svg
-[9]: images/top_6_subplots_v1_f5_p1.svg
+[8]: images/top_6_subplots_v2_f0_p1.svg
+[9]: images/top_6_subplots_v2_f5_p1.svg
+[10]: images/top_6_matshow_f0_p1.svg
+[11]: images/top_6_matshow_f5_p1.svg
 
-top_6_subplots_v1_f0_p1
+
+
+
+
 [4]: images/git_data_example.svg
 [5]: images/git_model_pie.svg
 [3]: images/
