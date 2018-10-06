@@ -7,7 +7,7 @@ This is part two of my capstone project using this dataset. Part one can be foun
 
 ### Pat Hottovy
 #### Data Scientist
-Email: p.hottovy@gmail.com  
+Email: phottovy@gmail.com  
 Linkedin: [in/patrick-hottovy](https://www.linkedin.com/in/patrick-hottovy/)
 
 
@@ -162,8 +162,9 @@ One method of calculating this is to divide the RMSE by the mean of the data:
 ![All_6_KNN][24]
 ![Top_3_KNN][25]
 
-
-
+#### All Six Vs Top 3
+![All_6][26]
+![Top_3][27]
 
 
 
@@ -210,7 +211,8 @@ After building a pipeline to test the data, I discovered with this data, all of 
 [23]: images/top_3_f0_p1_rf_(top_3).svg
 [24]: images/top_3_f5_p1_knn_(all_6).svg
 [25]: images/top_3_f5_p1_knn_(top_3).svg
-
+[26]: images/top_3_all_6_norm_rmse_by_feed.svg
+[27]: images/top_3_top_3_norm_rmse_by_feed.svg
 
 
 
