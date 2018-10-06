@@ -251,4 +251,4 @@ After scratching my head on ways to continue to improve the predictions, it hit 
 [34]: images/top_3_val_all_6_norm_rmse_by_feed.svg
 [35]: images/top_3_val_top_3_norm_rmse_by_feed.svg
 [36]: images/top_3_val_top_3_validation_set_norm_rmse_by_feed.svg
-[37]: images/final_approach_comp_KNN.svg
+[37]: images/final_approach_comp_knn.svg
