@@ -24,8 +24,12 @@ Linkedin: [in/patrick-hottovy](https://www.linkedin.com/in/patrick-hottovy/)
 
 <a id='background'></a>
 ## BACKGROUND
-![ClickFox_logo][3]  
-<!-- <img style="float: right;" src="images/CF_logo.png"> -->
+
+<p align="center">
+  <img src="images/dual_logos.png">
+</p>
+
+
 In today’s business world, anticipating the needs and wants of your customers is vital to the success of your business. Partnering with [ClickFox][2], the leader in “Customer Journey Analytics,” I was able to gain valuable real-world experience using advanced analytics working with customer data on a current business use case.  
 
 For a particular client, ClickFox provides forecasts for daily, aggregated KPI’s related to key segments of the customer journey. The goal of this project is to both analyze the current process and look for ways to optimize the flow of information going forward.
@@ -94,8 +98,11 @@ This ultimately turned the project into a multiclass classification problem. I c
 * Random Forests
 * Multilayer Perceptron Neural Network
 
-To evaluate the models, I used root mean squared error (RMSE) to evaluate the models:
-![rmse][10]
+To evaluate the models, I used root mean squared error (RMSE) to evaluate the models:  
+<p align="center">
+  <img src="images/rmse.svg">
+</p>
+<!-- ![rmse][10] -->
 <!-- $$ RMSE = \sqrt{\frac{1}{n}\sum_{i=1}^{n}(Y_i - \hat{Y}_i)^2}$$ -->
 
 ![Feed_0_matshow][11]
