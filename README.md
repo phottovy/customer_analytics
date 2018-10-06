@@ -19,7 +19,7 @@ Linkedin: [in/patrick-hottovy](https://www.linkedin.com/in/patrick-hottovy/)
 * [Modeling Techniques](#models)
 * [Change to Approach](#change)
 * [Final Change](#final)
-* [Results](#results)
+* [Conclusion](#conclusion)
 * [References](#references)
 <!-- * [About Me](#about-me) -->
 
@@ -193,6 +193,20 @@ After scratching my head on ways to continue to improve the predictions, it hit 
 ![Feed_5_RF][32]
 ![Feed_5_KNN][33]
 
+#### Comparison of All Three Approaches:
+![All_6][34]
+![Top_3][35]
+![Top_3_Val][36]
+
+
+<a id='conclusion'></a>
+## CONCLUSION
+
+![Conclusion][37]
+* Even though it isn't a perfect comparison since the validation set is a smaller date range, you can see in the graph above that limiting the prediction to the top 3 predictors as well as shortening the window appears to improve the accuracy of the forecast.
+* This gives me more confidence in the predictions since in reality, the models would be recalculated daily and the predictions would not cover date ranges as large as the test sets.
+* Finally, since the validation set was not seen by the model, it does somewhat validate that the different models are working. 
+
 
 <a id='references'></a>
 ## References
@@ -234,3 +248,7 @@ After scratching my head on ways to continue to improve the predictions, it hit 
 [31]: images/top_3_val_f5_p1_mlp.svg
 [32]: images/top_3_val_f5_p1_rf.svg
 [33]: images/top_3_val_f5_p1_knn.svg
+[34]: images/top_3_val_all_6_norm_rmse_by_feed.svg
+[35]: images/top_3_val_top_3_norm_rmse_by_feed.svg
+[36]: images/top_3_val_top_3_validation_set_norm_rmse_by_feed.svg
+[37]: images/final_approach_comp_knn.svg
