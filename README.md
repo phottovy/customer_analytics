@@ -136,7 +136,10 @@ One method of calculating this is to divide the RMSE by the mean of the data:
 
 
 ![Top_6_Model_Comp][20]
-![Top_6_Model_Pie][21]
+<p align="center">
+  <img src="images/top_6_pie_by_feed.svg">
+</p>
+<!-- ![Top_6_Model_Pie][21] -->
 
 
 
