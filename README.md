@@ -205,7 +205,7 @@ After scratching my head on ways to continue to improve the predictions, it hit 
 ![Conclusion][37]
 * Even though it isn't a perfect comparison since the validation set is a smaller date range, you can see in the graph above that limiting the prediction to the top 3 predictors as well as shortening the window appears to improve the accuracy of the forecast.
 * This gives me more confidence in the predictions since in reality, the models would be recalculated daily and the predictions would not cover date ranges as large as the test sets.
-* Finally, since the validation set was not seen by the model, it does somewhat validate that the different models are working.
+* Finally, since the validation set was not seen by the model, it does somewhat validate that the final approach improves the forecasts.
 
 
 <a id='references'></a>
