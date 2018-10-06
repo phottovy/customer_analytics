@@ -17,7 +17,6 @@ Linkedin: [in/patrick-hottovy](https://www.linkedin.com/in/patrick-hottovy/)
 * [Objectives](#objectives)
 * [Approach](#approach)
 * [Modeling Techniques](#models)
-* [Measures](#measures)
 * [Results](#results)
 * [References](#references)
 <!-- * [About Me](#about-me) -->
@@ -105,30 +104,34 @@ To evaluate the models, I used root mean squared error (RMSE) to evaluate the mo
 <!-- ![rmse][10] -->
 <!-- $$ RMSE = \sqrt{\frac{1}{n}\sum_{i=1}^{n}(Y_i - \hat{Y}_i)^2}$$ -->
 
+After running the data through the different models, here is what the MLP predicted for the test set:
+
 ![Feed_0_matshow][11]
 
 ![Feed_5_matshow][12]
+**Target: Shows actual best predictor for test set**  
+**Predictions: Shows classification prediction**  
+**Pred Probabilities: Shows the predicted probabilities for all six predictors**
 
+Since this particular model predicted predictor_3 for most days, it will result in a low accuracy score. **This is a great example that demonstrates that "accuracy" is not always the best way to measure your model's performance.** The goal of this project is to provide one daily forecast. Even though predictor_3 was not the "best" predictor on a given day, it could still be close to the actual "best" predictor.
 
+Now I need to convert the predictions back to their numeric values and see how they compare to the actual KPI for those days.
 
-<a id='measures'></a>
-## MEASURES
-Even though the daily KPI is a continuous variable, the focus of this project was to determine which of the current predictors or combination of predictors provided the best results.
+#### Feed 0 Results for Each Model
+![Feed_0_MLP][13]
+![Feed_0_RF][14]
+![Feed_0_KNN][15]
 
-This ultimately turned the project into a multiclass classification problem. I created models and tested the data using the following techniques:
-* Logistic Regression
-* k Nearest Neighbors
-* Ensemble methods
- * Random Forests
- * Gradient Boosting
-* Multilayer Perceptron Neural Network
+#### Feed 5 Results for Each Model
+![Feed_5_MLP][16]
+![Feed_5_RF][17]
+![Feed_5_KNN][18]
 
-
-<a id='Results'></a>
+<!-- <a id='Results'></a>
 ## RESULTS
 After building a pipeline to test the data, I discovered with this data, all of the classification models provided reasonably similar results. Below are the models that provided the best scores for the different feeds:
 
-![model_pie][5]
+![model_pie][5] -->
 
 <a id='references'></a>
 ## References
@@ -149,13 +152,17 @@ After building a pipeline to test the data, I discovered with this data, all of 
 [10]: images/rmse.svg
 [11]: images/top_6_matshow_f0_p1.svg
 [12]: images/top_6_matshow_f5_p1.svg
+[13]: images/top_6_f0_p1_mlp.svg
+[14]: images/top_6_f0_p1_rf.svg
+[15]: images/top_6_f0_p1_knn.svg
+[16]: images/top_6_f5_p1_mlp.svg
+[17]: images/top_6_f5_p1_rf.svg
+[18]: images/top_6_f5_p1_knn.svg
 
 
 
-
-
-[4]: images/git_data_example.svg
+<!-- [4]: images/git_data_example.svg
 [5]: images/git_model_pie.svg
 [3]: images/
 [3]: images/
-[3]: images/
+[3]: images/ -->
