@@ -62,7 +62,7 @@ As you can see in the graphs above, Feed 0 is relatively consistent while Feed 5
 * Analyze the time series data and identify the trends and features that are most indicative of future activity
 * Create a workflow from the current process to provide a single daily forecast using either one or a combination of the current predictors
 
-### Step 1: Identify the best predictors per day
+# Step 1: Identify the best predictors per day
 Looking at the data, I calculated which of the six prediction methods was closest to actuals in hopes of finding trends between the predictors.
 
 #### Feed 0
@@ -70,10 +70,10 @@ Looking at the data, I calculated which of the six prediction methods was closes
 
 #### Feed 5
 ![Feed_5_subplots][9]
-
 **Fig 1: Raw Data compared to the best forecast per day**  
 **Fig 2: Raw Data compared to overall best predictor**  
 **Fig 3: Composite of the best predictor per day by color (this is the same forecast as Fig 1)**
+
 
 The third figure for both feeds shows that all six predictors are often the closest for a particular day. Unfortunately, there does not seem to be an obvious trend between the predictors.
 
@@ -81,9 +81,9 @@ The third figure for both feeds shows that all six predictors are often the clos
 <a id='approach'></a>
 ## APPROACH
 * Unfortunately the previous approach only works if you know the actual amount each day, which defeats the purpose of even making a prediction
-* We need to come up with a way to predict which of the predictor or combination of predictors was going to be the "best" each day
+* I need to come up with a way to predict which of the predictor or combination of predictors was going to be the "best" each day
 
-### Step 2: Use machine learning to predict the "best" predictor
+# Step 2: Use machine learning to predict the "best" predictor
 
 <a id='models'></a>
 ## MODELING TECHNIQUES
@@ -95,14 +95,12 @@ This ultimately turned the project into a multiclass classification problem. I c
 * Multilayer Perceptron Neural Network
 
 To evaluate the models, I used root mean squared error (RMSE) to evaluate the models:
+![rmse][10]
+<!-- $$ RMSE = \sqrt{\frac{1}{n}\sum_{i=1}^{n}(Y_i - \hat{Y}_i)^2}$$ -->
 
-$$
-RMSE = \sqrt{\frac{1}{n}\sum_{i=1}^{n}(Y_i - \hat{Y}_i)^2}
-$$
+![Feed_0_matshow][11]
 
-![Feed_0_matshow][10]
-
-![Feed_5_matshow][11]
+![Feed_5_matshow][12]
 
 
 
@@ -141,8 +139,9 @@ After building a pipeline to test the data, I discovered with this data, all of 
 [7]: images/all_six_f5_p1.svg
 [8]: images/top_6_subplots_v2_f0_p1.svg
 [9]: images/top_6_subplots_v2_f5_p1.svg
-[10]: images/top_6_matshow_f0_p1.svg
-[11]: images/top_6_matshow_f5_p1.svg
+[10]: images/rmse.svg
+[11]: images/top_6_matshow_f0_p1.svg
+[12]: images/top_6_matshow_f5_p1.svg
 
 
 
