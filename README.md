@@ -17,6 +17,7 @@ Linkedin: [in/patrick-hottovy](https://www.linkedin.com/in/patrick-hottovy/)
 * [Objectives](#objectives)
 * [Approach](#approach)
 * [Modeling Techniques](#models)
+* [Change to Approach](#change)
 * [Results](#results)
 * [References](#references)
 <!-- * [About Me](#about-me) -->
@@ -141,9 +142,15 @@ One method of calculating this is to divide the RMSE by the mean of the data:
 </p>
 <!-- ![Top_6_Model_Pie][21] -->
 
+* Looking at these results, there is no clear distinction between the different modeling techniques.
+* Even the best feeds, the forecast is coming in greater than 15 percent from the actuals which is not all that useful in a daily forecast.  
+* You could probably get better results by simply using the previous several days or maybe day of the week since many of the feeds have a weekly cycle.
 
+<a id='change'></a>
+## CHANGE TO APPROACH
+* Let's explore ways to improve the results
 
-
+# Step 3: Limit predictions to top 3 predictors over the training range
 
 <!-- <a id='Results'></a>
 ## RESULTS
