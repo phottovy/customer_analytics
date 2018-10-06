@@ -107,7 +107,6 @@ To evaluate the models, I used root mean squared error (RMSE) to evaluate the mo
 After running the data through the different models, here is what the MLP predicted for the test set:
 
 ![Feed_0_matshow][11]
-
 ![Feed_5_matshow][12]
 **Target: Shows actual best predictor for test set**  
 **Predictions: Shows classification prediction**  
@@ -117,15 +116,31 @@ Since this particular model predicted predictor_3 for most days, it will result 
 
 Now I need to convert the predictions back to their numeric values and see how they compare to the actual KPI for those days.
 
-#### Feed 0 Results for Each Model
+#### Feed 0 Results for Each Model:
 ![Feed_0_MLP][13]
 ![Feed_0_RF][14]
 ![Feed_0_KNN][15]
 
-#### Feed 5 Results for Each Model
+#### Feed 5 Results for Each Model:
 ![Feed_5_MLP][16]
 ![Feed_5_RF][17]
 ![Feed_5_KNN][18]
+
+### Comparison of the Different Modeling Techniques
+To evaluate each feed using the same scale, I found it more useful to use the normalized RMSE, which converts the RMSE to the percent difference from actuals.  
+One method of calculating this is to divide the RMSE by the mean of the data:
+<p align="center">
+  <img src="images/nrmse.svg">
+</p>
+<!-- ![nrmse][19] -->
+
+
+![Top_6_Model_Comp][20]
+![Top_6_Model_Pie][21]
+
+
+
+
 
 <!-- <a id='Results'></a>
 ## RESULTS
@@ -158,8 +173,9 @@ After building a pipeline to test the data, I discovered with this data, all of 
 [16]: images/top_6_f5_p1_mlp.svg
 [17]: images/top_6_f5_p1_rf.svg
 [18]: images/top_6_f5_p1_knn.svg
-
-
+[19]: images/nrmse.svg
+[20]: images/top_6_norm_rmse_by_feed.svg
+[21]: images/top_6_pie_by_feed.svg
 
 <!-- [4]: images/git_data_example.svg
 [5]: images/git_model_pie.svg
